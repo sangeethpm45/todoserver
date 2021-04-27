@@ -15,6 +15,12 @@ app.post('/register',(req,res)=>{
         res.status(result.statuscode).json(result)
     })
 })
+// app.get('/idiot',(req,res)=>{
+//     console.log("uname is "+req.body.uname);
+//     dataservice.idiot().then((result)=>{
+//         res.status(result.statuscode).json(result)
+//     })
+// })
 app.post('/login',(req,res)=>{
     dataservice.login(req.body.uname,req.body.password).then(result=>{
         res.status(result.statuscode).json(result)

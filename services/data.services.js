@@ -10,6 +10,7 @@ return db.Data.findOne({uname}).then((result)=>{
         }
     }
     else{
+        
         const newuser =new db.Data({
             uname,
             password,
@@ -134,13 +135,14 @@ const reset_data=(uname)=>{
         }
     })
 }
- 
+
 module.exports={
     register,
     login,
     add_data,
     deletedata,
     getdata,
-    reset_data
+    reset_data,
+    
     
 }
